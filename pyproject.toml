@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mathesis"
+version = "0.1.0"
+description = ""
+authors = ["Piero <runa@live.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "*"
+jupyter = "*"
+geopandas = {version = "^1.0.1", extras = ["all"]}
+pyiceberg = {extras = ["duckdb", "pandas", "pyarrow", "s3fs", "sql-sqlite"], version = "^0.8.0"}
+geoarrow-pyarrow = "*"
+lonboard = "^0.10.3"
+palettable = "^3.3.3"
+h3 = "^4.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
