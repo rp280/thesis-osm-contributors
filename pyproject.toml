@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "mathesis"
 version = "0.1.0"
+package-mode = false
 description = ""
 authors = ["Piero <runa@live.de>"]
 readme = "README.md"
@@ -15,6 +16,8 @@ geoarrow-pyarrow = "*"
 lonboard = "^0.10.3"
 palettable = "^3.3.3"
 h3 = "^4.2.1"
+seaborn = "^0.13.2"
+shap = "^0.50.0"
 
 
 [tool.poetry.group.dev.dependencies]
