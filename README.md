@@ -16,7 +16,7 @@ To address these questions, the project integrates large-scale OSM history data,
 
 ## Data Source  
 - This project relies on **preprocessed OpenStreetMap full-history data**.  
-- The raw `.pbf` history files were already transformed into **GeoParquet** format using [**ohsome-planet**](https://github.com/GIScience/ohsome-planet), a tool developed at **HeiGIT (Heidelberg Institute for Geoinformation Technology)**.  
+- The raw `.pbf` history files were already transformed into **GeoParquet** format using [**ohsome-planet**](https://github.com/GIScience/ohsome-planet), a tool developed at [**HeiGIT (Heidelberg Institute for Geoinformation Technology)**](https://heigit.org).  
 - These enriched and extracted GeoParquet datasets (including geometries and changeset metadata) are hosted in a **MinIO storage system**.  
 - The workflows in this repository therefore start directly from the **GeoParquet data in MinIO**, without requiring local execution of ohsome-planet.  
 
