@@ -71,5 +71,5 @@ The preprocessing pipeline is designed to reduce the massive OSM dataset step by
   - PCA scree plots, evaluation metrics, and cluster heatmaps stored in `/results` and `/plots`.  
 
 **Main Script Example:**  
-```bash
+```bash poetry run python 001_preprocessing.py DEU POL
 
