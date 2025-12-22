@@ -70,6 +70,14 @@ The preprocessing pipeline is designed to reduce the massive OSM dataset step by
   - Cluster labels stored as Parquet.  
   - PCA scree plots, evaluation metrics, and cluster heatmaps stored in `/results` and `/plots`.  
 
-**Main Script Example:**  
-```bash poetry run python 001_preprocessing.py DEU POL ```
+### Reference Data
 
+The file `data/boundaries/world/world_boundaries_overture_iso_a3.parquet` is a static reference dataset
+used for country-level joins.  
+It is included in the repository for reproducibility and convenience and
+should not be regenerated or modified.
+
+**Main Script Example:**  
+```bash
+ poetry run python 001_preprocessing.py DEU POL
+```
