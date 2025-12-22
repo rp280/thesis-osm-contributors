@@ -1,0 +1,2 @@
+Model,Train_Time_sec,Predict_Time_sec,Precision_False,Recall_False,Precision_True,Recall_True
+SGD Classifier,437.3,0.09,0.6,0.43,0.85,0.92
