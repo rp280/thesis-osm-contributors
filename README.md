@@ -1,6 +1,6 @@
 # OSM Contributor Analysis - Master's Thesis
 
-## Overview  
+## 1. Overview  
 This repository contains the code and workflows developed for my Master's thesis in Geography/Geoinformatics.  
 The project is guided by two central research questions:
 
@@ -13,8 +13,42 @@ The project is guided by two central research questions:
 To address these questions, the project integrates large-scale OSM history data, advanced preprocessing workflows in **Python** and **SQL (DuckDB)**, and machine learning approaches.
 
 ---
+## 2. Project Structure
 
-## Data Source  
+The repository is organized as follows:
+
+```text
+.
+├── README.md                 # Project overview and documentation
+├── pyproject.toml            # Poetry configuration and dependencies
+├── poetry.lock               # Locked dependency versions
+│
+├── data/
+│   └── boundaries/world/
+│       └── world_boundaries_overture_iso_a3.parquet # Static reference dataset used for country-level joins
+│
+├── sql/
+│   ├── 00_prediction_user_summary_180d.sql   # SQL scripts for data aggregation and feature creation. Preprocessing for Prediction    
+│   └── 00_categorization_user_summary.sql    # SQL scripts for data aggregation and feature creation. Preprocessing for Categorization
+│
+├── src/
+│   ├── 001_preprocessing.py   # Executes preprocessing SQL and data aggregation
+│   ├── 002_prediction.py      # Trains and evaluates prediction models
+│   └── 003_categorization.py  # Runs contributor categorization pipeline    
+│
+├── results/
+│   ├── 00_preprocessing/      # Generated user-level summary tables
+│   ├── 01_prediction/         # Model results, metrics, and figures
+│   └── 02_prediction/         # Categorization plots
+│
+└── plots/
+    ├──  01_prediction/        # Prediction plots
+    └──  02_categorization/    # Categorization plots
+```
+
+---
+
+## 3. Data Source  
 - This project relies on **preprocessed OpenStreetMap full-history data**.  
 - The raw `.pbf` history files were already transformed into **GeoParquet** format using [**ohsome-planet**](https://github.com/GIScience/ohsome-planet), a tool developed at [**HeiGIT (Heidelberg Institute for Geoinformation Technology)**](https://heigit.org).  
 - These enriched and extracted GeoParquet datasets (including geometries and changeset metadata) are hosted in a **MinIO storage system**.  
@@ -22,7 +56,7 @@ To address these questions, the project integrates large-scale OSM history data,
 
 ---
 
-## Preprocessing Workflow  
+## 4. Preprocessing Workflow  
 
 The preprocessing pipeline is designed to reduce the massive OSM dataset step by step, while retaining key features for analysis.
 
@@ -43,7 +77,7 @@ The preprocessing pipeline is designed to reduce the massive OSM dataset step by
 
 ---
 
-## Analysis  
+## 5. Analysis  
 
 ### 1. Prediction of Contributor Retention  
 - **Goal**: Supervised classification (active vs. left early).  
@@ -70,14 +104,17 @@ The preprocessing pipeline is designed to reduce the massive OSM dataset step by
   - Cluster labels stored as Parquet.  
   - PCA scree plots, evaluation metrics, and cluster heatmaps stored in `/results` and `/plots`.  
 
-### Reference Data
+### 6. Reference Data
 
 The file `data/boundaries/world/world_boundaries_overture_iso_a3.parquet` is a static reference dataset
 used for country-level joins.  
 It is included in the repository for reproducibility and convenience and
 should not be regenerated or modified.
 
+### 7. Run the Script
 **Main Script Example:**  
+If you are using a Poetry environment, you can run the following command.
+Make sure you are in the project root directory when executing the script.
 ```bash
  poetry run python 001_preprocessing.py DEU POL
 ```
