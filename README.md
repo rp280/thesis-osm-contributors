@@ -118,3 +118,15 @@ Make sure you are in the project root directory when executing the script.
 ```bash
  poetry run python 001_preprocessing.py DEU POL
 ```
+
+
+## License
+
+The source code in this repository is licensed under the MIT License.
+
+The reference dataset `data/boundaries/world/world_boundaries_overture_iso_a3.parquet` was derived from data provided by the Overture Maps Foundation. The dataset is included for academic and reproducibility purposes only.
+All rights and licenses for the underlying data remain with the original
+data providers.
+
+Please refer to the Overture Maps Foundation for the original data license
+(CDLA Permissive 2.0).
