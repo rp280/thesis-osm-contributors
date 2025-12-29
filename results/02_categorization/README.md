@@ -131,4 +131,4 @@ The objective is to identify patterns in editing behavior and to group contribut
 The script was running for 2463 sec.
 
 ## Parquet files
-The results as Parquet files for the GMM and KMeans are stored in this link, as they are a little bit bigger: https://heibox.uni-heidelberg.de/d/5cc40e5fe2e14c7ca628/
+The results as Parquet files for the GMM and KMeans are stored in this link, as they are a little bit bigger: [Heibox-Link: Categorization](https://heibox.uni-heidelberg.de/d/5cc40e5fe2e14c7ca628/)
