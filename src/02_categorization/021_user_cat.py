@@ -26,7 +26,7 @@ DATA_PATH = (
     / "results" 
     / "00_preprocessing" 
     / "user_summary" 
-    / "pred.parquet"
+    / "cat.parquet"
 ).as_posix()
 
 PLOTS_DIR = PROJECT_ROOT / "results" / "02_categorization" / "plots" 
